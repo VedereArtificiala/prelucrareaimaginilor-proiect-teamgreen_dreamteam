@@ -9,6 +9,7 @@ from PyQt5.QtWidgets import *
 facesList = []
 namesList = []
 
+#info- se recomanda folosirea pozelor cu extensie .jpeg
 def webcam(thisFrame):
     currentFrame = cv2.resize(thisFrame, (0, 0), fx=0.25, fy=0.25)
     faceLocations = face_recognition.face_locations(currentFrame, number_of_times_to_upsample=1, model='hog')
